@@ -50,9 +50,10 @@ require.config({
     }
 });
 
-require(['app', 'jquery'], function (app, $) {
+require(['app', 'jquery', 'bootstrapTransition', 'bootstrapCarousel'], function (app, $) {
     'use strict';
     // use app here
+    //$('.carousel').carousel();
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });
