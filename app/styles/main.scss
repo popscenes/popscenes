@@ -20,7 +20,7 @@ body
 {
  background-color: $psGrey;
  color: $psLightGrey;
- font-family: tahoma, sans-serif;
+ font-family: open-sans, sans-serif;
 }
 
 h1
@@ -29,14 +29,43 @@ h1
   font-weight: normal;
 }
 
-.row{
+
+
+.row
+{
+  padding-bottom: 8%;
   padding-top: 8%;
 }
 
-.logo
+.navbar
 {
-  width: 64px;
+  background-color: #282828;
+  border: none;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-height: 45px;
+  p
+  {
+    line-height: 45px;
+    padding: 0;
+    margin: 0;
+  }
 }
+
+.main-logo
+{
+  font-size: 64px;
+  line-height: 64px;
+  color: white;
+  .logo
+  {
+    width: 64px;
+  }
+  
+}
+
+
 
 
 .carousel,.item,.active{height:100%;}
