@@ -33,24 +33,24 @@
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="item active">
-      <div class="fill concert" style="background-image:url('/images/concert.jpg');">
-      
-      
-        <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-4 main-logo">
-            <img class="logo" src="/images/logo.png">
-            POPSCENES         
-        </div>
+    <div class="item active concert">
+      <div class="fill concertPic" style="">
+        <div class="main-logo">
+            <div class="text-center">
+                <img class="logo text-right" src="/images/popscenesLogo.png"/>
+              POPSCENES
+            </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6">
-            Discover Local Gigs
+          <div class="col-xs-12 text-center">
+            Discover Local Gigs  
           </div>
         </div>
 
@@ -63,7 +63,7 @@
         <div class="gigsOnline">
         <h1>Your Gigs Online</h1>
         <p>
-        Still promoting your gigs on dead trees? Or your site is made by pre-pubescent kinds in need of pocket change? Chances are, you really want to promote your gigs online but this fancy stuff is simply overwhelming.</p>
+        Still promoting your gigs on dead trees? Or your site is made by pre-pubescent kids in need of pocket change? Chances are, you really want to promote your gigs online but this fancy stuff is simply overwhelming.</p>
         <p>    
         Introducing Popscenes, your local gig guide online. Organisers upload gigs in a few clicks. Punters browse gigs you’ve uploaded on web or mobile.
         </p>
@@ -127,7 +127,7 @@
           </p>
         </div>
       </div>
-      <div class="row">
+      <div class="row rowwithPadding">
         <div class="col-md-2 col-sm-2 col-xs-1"></div>
         <div class="col-md-3 col-sm-3 hidden-xs">
           <img class="img-responsive" src="/images/ultimateEventPlatform.png">
@@ -139,6 +139,48 @@
           <img class="img-responsive" src="/images/ultimateEventPlatform.png">
         </div>
       </div>
+      </div>
+      <div class="item">
+      <h1 class="text-center">Interested?</h1>
+      
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <p class="text-center">
+            To help us launch sooner, we would love for you to contact us
+          </p>
+        </div>
+      </div>
+
+      <div class="row" style="display:none">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+          <input type="text" value="Email"/>
+        </div>
+      </div>
+      
+      <div class="row rowwithPadding">
+        <div class="col-xs-12 col-sm-5 col-sm-offset-3">
+          <p>
+            If you are an event organiser, such as a venue owner, band manager or festival organiser we would like to manage your gigs.
+          </p>
+        </div>
+        <div class="visible-xs col-xs-4"></div>
+        <div class="col-xs-8 col-sm-4">
+          <button id="orgEmail" type="button" class="btn btn-default">I'm an Organiser</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-sm-offset-3">
+      <p>
+        If you're a punter. tell us what gigs you'd lke to see here
+      </p>
+      </div>
+      <div class="visible-xs col-xs-4"></div>
+      <div class="col-xs-8 col-sm-4">
+      <button id="punterEmail" type="button" class="btn btn-default">I'm A Punter</button>
+      </div>
+      </div>
+
       </div>
   </div>
 

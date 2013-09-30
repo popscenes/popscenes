@@ -54,45 +54,67 @@ require(['app', 'jquery', 'bootstrapTransition', 'bootstrapCarousel'], function 
     'use strict';
     // use app here
     //$('.carousel').carousel();
-    $('.carousel').carousel('pause')
+    $('.carousel').carousel('pause');
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 
-
-    var scrollStart = 0;
     var lastScroll = new Date();
+      
+    $(document).keydown(function(e){
+        if (e.keyCode === 40) {
+            $('.carousel').carousel('next');
+        }
+        if (e.keyCode === 38) {
+            $('.carousel').carousel('prev');
+        }
+    });
 
-            
-            $(document).keydown(function(e){
-                if (e.keyCode == 40) { 
-                    $('.carousel').carousel('next');
-                }
-                if (e.keyCode == 38) { 
-                    $('.carousel').carousel('prev');        
-                }
-            });
+    $('#orgEmail').click(function(){
+        window.open('mailto:info@popscenes.com?subject=Interest Organiser&body=Hi im an organiser interested in popscenes.');
+    });
 
-            $(window).on('DOMMouseScroll mousewheel', function (e) {
-              
-               //if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) 
-               var currentTime = new Date;
-               if((currentTime.getTime() - lastScroll.getTime()) < 1000)
-               {
-                  return false;
-               }
+    $('#punterEmail').click(function(){
+        window.open('mailto:info@popscenes.com?subject=Interest Punter&body=Hi im a punter interested in popscenes.');
+    });
+
+    
+
+    var startCoords = {};//, endCoords = {};
+    $(document.body).bind('touchstart', function(event) {
+        startCoords = event.originalEvent.targetTouches[0];
+    });
+
+    document.addEventListener('touchmove', function(e) {
+        var currentY = e.touches[0].clientY;
+        if(currentY < startCoords.clientY){
+            $('.carousel').carousel('next');
+        }else{
+            $('.carousel').carousel('prev');
+        }
+
+    }, false);
+
+    $(window).on('DOMMouseScroll mousewheel', function (e) {
+      
+        //if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) 
+        var currentTime = new Date();
+        if((currentTime.getTime() - lastScroll.getTime()) < 1000)
+        {
+            return false;
+        }
 
 
-              if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) { 
-                $('.carousel').carousel('next');
-                
-              } else {
-                $('.carousel').carousel('prev');
-             
-              }
-            lastScroll = new Date();
+        if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+            $('.carousel').carousel('next');
 
-              return false;
-            });
+        } else {
+            $('.carousel').carousel('prev');
+
+        }
+        lastScroll = new Date();
+
+        return false;
+    });
 
 
 });

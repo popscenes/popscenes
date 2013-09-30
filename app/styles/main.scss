@@ -1,6 +1,7 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 $psGrey: #2f2f2f;
+$psDark: #010101;
 $psRed: #e15355;
 $psLightGrey: #d4d4d4;
 
@@ -18,9 +19,9 @@ html,body{height:100%;}
 
 body
 {
- background-color: $psGrey;
  color: $psLightGrey;
  font-family: open-sans, sans-serif;
+ background-color: $psDark;
 }
 
 h1
@@ -29,12 +30,17 @@ h1
   font-weight: normal;
 }
 
-
-
-.row
+.concert
 {
-  padding-bottom: 8%;
-  padding-top: 8%;
+  
+  background-color: $psDark !important;
+  
+  .concertPic
+  {
+    background-position:top;
+    margin-top: 70px;
+    background-image:url('/images/concert.jpg');
+  }
 }
 
 .navbar
@@ -55,17 +61,38 @@ h1
 
 .main-logo
 {
-  font-size: 64px;
-  line-height: 64px;
+  font-size: 32px;
+  line-height: 32px;
   color: white;
+  margin-top: -70px;
+  vertical-align: bottom;
+  max-width: 250px;
+  margin-left:auto;
+  margin-right: auto;
+  div
+  {
+    padding: 0;
+  }
   .logo
   {
-    width: 64px;
+    width: 32px;
+    float: left;
+    text-align: right;
+
   }
-  
 }
-
-
+@media (min-width: $screen-tablet) {
+  .main-logo
+  {
+    font-size: 64px;
+    line-height: 64px;
+    max-width: 500px;
+    .logo
+    {
+      width: 64px;
+    }
+  }
+}
 
 
 .carousel,.item,.active{height:100%;}
@@ -77,6 +104,8 @@ h1
 }
 
 .carousel.vertical .item {
+  background-color: $psGrey;
+  padding-top: 70px;
   -webkit-transition: 0.6s ease-in-out top;
      -moz-transition: 0.6s ease-in-out top;
       -ms-transition: 0.6s ease-in-out top;
@@ -121,4 +150,9 @@ h1
 .gigsImage
 {
   width: 677px;
+}
+
+.rowwithPadding
+{
+  padding-top: 4%;
 }
